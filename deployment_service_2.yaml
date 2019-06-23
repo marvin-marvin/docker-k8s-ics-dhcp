@@ -69,6 +69,7 @@ spec:
       hostNetwork: true
       nodeSelector:
         location: lan
+        nodetype: nuc
       restartPolicy: Always
       schedulerName: default-scheduler
       securityContext: {}
