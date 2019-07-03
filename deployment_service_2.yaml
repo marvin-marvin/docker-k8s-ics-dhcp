@@ -48,6 +48,7 @@ spec:
         volumeMounts:
         - mountPath: /etc/dhcp
           name: k8s-cfg-ics-dhcp-etc
+          readOnly: true
         - mountPath: /var/lib/dhcp
           name: k8s-cfg-ics-dhcp-var
         resources: {}
