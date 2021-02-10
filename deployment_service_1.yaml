@@ -37,7 +37,7 @@ spec:
       containers:
       - env:
         - name: tz
-          value: Europe/Berlin
+          value: UTC
         image: marvinmarvin/docker-k8s-ics-dhcp
         imagePullPolicy: Always
         name: ics-dhcp
