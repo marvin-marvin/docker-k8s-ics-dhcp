@@ -8,7 +8,7 @@ metadata:
     location: lan
   name: ics-dhcp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       k8s-app: ics-dhcp
@@ -41,10 +41,10 @@ spec:
         volumeMounts:
         - mountPath: /etc/dhcp
           name: k8s-ics-dhcp-etc
-          subPath: "ics-dhcp/etc"
+#          subPath: "ics-dhcp/etc"
         - mountPath: /var/lib/dhcp
           name: k8s-ics-dhcp-var
-          subPath: "ics-dhcp/var"
+#          subPath: "ics-dhcp/var"
         resources: {}
         securityContext:
           privileged: false
