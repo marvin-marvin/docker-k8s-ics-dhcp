@@ -39,10 +39,10 @@ spec:
           name: dhcp
           protocol: UDP
         volumeMounts:
-        - mountPath: /etc/dhcp
+        - mountPath: "/etc/dhcp"
           name: k8s-ics-dhcp-etc
           subPath: "ics-dhcp/etc"
-        - mountPath: /var/lib/dhcp
+        - mountPath: "/var/lib/dhcp"
           name: k8s-ics-dhcp-var
           subPath: "ics-dhcp/var"
         resources: {}
