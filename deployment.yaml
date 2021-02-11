@@ -8,7 +8,7 @@ metadata:
     location: lan
   name: ics-dhcp
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       k8s-app: ics-dhcp
