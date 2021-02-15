@@ -67,7 +67,7 @@ spec:
         persistentVolumeClaim:
           claimName: k8s-pvc
       dnsPolicy: ClusterFirst
-      hostNetwork: true
+#      hostNetwork: true
       nodeSelector:
         location: lan
       restartPolicy: Always
