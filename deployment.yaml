@@ -39,11 +39,11 @@ spec:
           name: dhcp
           protocol: UDP
         volumeMounts:
-        - mountPath: "/etc/dhcp"
+        - mountPath: /etc/dhcp
           name: k8s-ics-dhcp-etc
-#          subPath: ics-dhcp/etc
-        - mountPath: "/var/lib/dhcp"
-          name: k8s-ics-dhcp-var
+          subPath: ics-dhcp
+#        - mountPath: "/var/lib/dhcp"
+#          name: k8s-ics-dhcp-var
 #          subPath: ics-dhcp/var
         resources: {}
         securityContext:
@@ -63,9 +63,9 @@ spec:
       - name: k8s-ics-dhcp-etc
         persistentVolumeClaim:
           claimName: k8s-pvc
-      - name: k8s-ics-dhcp-var
-        persistentVolumeClaim:
-          claimName: k8s-pvc
+#      - name: k8s-ics-dhcp-var
+#        persistentVolumeClaim:
+#          claimName: k8s-pvc
       dnsPolicy: ClusterFirst
       hostNetwork: true
       nodeSelector:
